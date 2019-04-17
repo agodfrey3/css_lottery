@@ -29,7 +29,7 @@ class Lottery(object):
 
         # Handle edge case of the list of people being fewer than the number of winners.
         if len(potential_choices) <= num_winners:
-            lottery_winners = potential_choices
+            lottery_winners = list(set(potential_choices))
         else:
             # Choose num_winners random winners.
             num_added = 0
